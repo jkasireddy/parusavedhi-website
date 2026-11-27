@@ -1,0 +1,29 @@
+# JetBrains IDE
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.log
+*.tmp
+
+# Dependencies and build artifacts
+node_modules/
+dist/
+
+# Confidential corporate documents
+private/
+internal-documents/
