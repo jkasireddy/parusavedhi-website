@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Parusavedhi Food Industries</title>
+
+    <meta name="description"
+          content="Contact Parusavedhi Food Industries for
+          product quotations, technical support, dealership
+          opportunities and business partnerships.">
+
+    <meta name="theme-color" content="#075324">
+
+    <link rel="canonical"
+          href="https://www.parusavedhi.com/contact">
+
+    <link rel="icon" href="assets/logo/favicon.ico">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
+
+    <!-- Cloudflare Turnstile -->
+
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async defer>
+    </script>
+
+</head>
+
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main id="main-content">
+
+    <!-- PAGE BANNER -->
+
+    <section class="page-banner">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / Contact Us
+            </div>
+
+            <span class="eyebrow eyebrow-gold">
+                Let's Start a Conversation
+            </span>
+
+            <h1>Connect With Parusavedhi.</h1>
+
+            <p class="lead-text">
+                Your next opportunity begins
+                with a conversation.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT INFORMATION AND FORM -->
+
+    <section class="section section-light">
+
+        <div class="container contact-layout">
+
+            <!-- CONTACT CHANNELS -->
+
+            <div class="contact-information">
+
+                <span class="eyebrow">
+                    We Welcome Your Enquiries
+                </span>
+
+                <h2>Get in Touch</h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Whether you are interested in our
+                    products, require technical assistance
+                    or wish to explore business opportunities,
+                    we welcome your enquiry.
+                </p>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">@</div>
+
+                    <div>
+
+                        <h3>General Enquiries</h3>
+
+                        <p>
+                            Corporate information and
+                            general communication.
+                        </p>
+
+                        <a href="mailto:info@parusavedhi.com">
+                            info@parusavedhi.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">S</div>
+
+                    <div>
+
+                        <h3>Product Sales &amp; Quotations</h3>
+
+                        <p>
+                            Product specifications,
+                            availability and pricing.
+                        </p>
+
+                        <a href="mailto:sales@parusavedhi.com">
+                            sales@parusavedhi.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">T</div>
+
+                    <div>
+
+                        <h3>Technical Support</h3>
+
+                        <p>
+                            Equipment assistance,
+                            maintenance and servicing.
+                        </p>
+
+                        <a href="mailto:support@parusavedhi.com">
+                            support@parusavedhi.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">P</div>
+
+                    <div>
+
+                        <h3>Business Partnerships</h3>
+
+                        <p>
+                            Dealerships, distribution and
+                            collaborative opportunities.
+                        </p>
+
+                        <a href="mailto:partnerships@parusavedhi.com">
+                            partnerships@parusavedhi.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">G</div>
+
+                    <div>
+
+                        <h3>International Business</h3>
+
+                        <p>
+                            Prospective international
+                            market opportunities.
+                        </p>
+
+                        <a href="mailto:exports@parusavedhi.com">
+                            exports@parusavedhi.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="contact-channel">
+
+                    <div class="contact-channel-icon"
+                         aria-hidden="true">IN</div>
+
+                    <div>
+
+                        <h3>Corporate Location</h3>
+
+                        <p>Hyderabad, Telangana, India</p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- ENQUIRY FORM -->
+
+            <div class="form-panel">
+
+                <span class="eyebrow">
+                    Start Here
+                </span>
+
+                <h2>Send Us an Enquiry</h2>
+
+                <p class="form-introduction">
+                    Tell us about your requirements.
+                    Fields marked with * are required.
+                </p>
+
+                <form id="enquiry-form"
+                      action="/api/enquiry"
+                      method="post">
+
+                    <div class="form-grid">
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                                <span class="required-mark">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your full name"
+                                autocomplete="name"
+                                maxlength="100"
+                                required>
+
+                        </div>
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span class="required-mark">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                maxlength="254"
+                                required>
+
+                        </div>
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+91"
+                                autocomplete="tel"
+                                maxlength="30">
+
+                        </div>
+
+                        <!-- ORGANIZATION -->
+
+                        <div class="form-group">
+
+                            <label for="organization">
+                                Organization
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organization"
+                                name="organization"
+                                placeholder="Company or business name"
+                                autocomplete="organization"
+                                maxlength="150">
+
+                        </div>
+
+                        <!-- LOCATION -->
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                City / State
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Your city and state"
+                                maxlength="150">
+
+                        </div>
+
+                        <!-- COUNTRY -->
+
+                        <div class="form-group">
+
+                            <label for="country">
+                                Country
+                            </label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                name="country"
+                                placeholder="Your country"
+                                autocomplete="country-name"
+                                maxlength="100">
+
+                        </div>
+
+                        <!-- CATEGORY -->
+
+                        <div class="form-group form-full">
+
+                            <label for="category">
+                                Enquiry Category
+                                <span class="required-mark">*</span>
+                            </label>
+
+                            <select
+                                id="category"
+                                name="category"
+                                required>
+
+                                <option value="">
+                                    Select enquiry category
+                                </option>
+
+                                <option value="general">
+                                    General Enquiry
+                                </option>
+
+                                <option value="sales">
+                                    Product Sales &amp; Quotation
+                                </option>
+
+                                <option value="support">
+                                    Technical Support
+                                </option>
+
+                                <option value="dealership">
+                                    Dealership Opportunity
+                                </option>
+
+                                <option value="distribution">
+                                    Distribution Partnership
+                                </option>
+
+                                <option value="business">
+                                    Entrepreneurial Opportunity
+                                </option>
+
+                                <option value="institutional">
+                                    Institutional Enquiry
+                                </option>
+
+                                <option value="community">
+                                    Community / Self-Help Group
+                                </option>
+
+                                <option value="exports">
+                                    International Business
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- PRODUCT INTEREST -->
+
+                        <div class="form-group form-full">
+
+                            <label for="product">
+                                Product Interest
+                            </label>
+
+                            <select
+                                id="product"
+                                name="product">
+
+                                <option value="">
+                                    Select product, if applicable
+                                </option>
+
+                                <option value="corn-roaster">
+                                    Electric Corn Roasting Machine
+                                </option>
+
+                                <option value="corn-boiler">
+                                    Sweet Corn Boiling Machine
+                                </option>
+
+                                <option value="both">
+                                    Both Products
+                                </option>
+
+                                <option value="other">
+                                    Other / Not Applicable
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group form-full">
+
+                            <label for="message">
+
+                                Your Message
+
+                                <span class="required-mark">*</span>
+
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell us about your requirements..."
+                                minlength="10"
+                                maxlength="3000"
+                                required></textarea>
+
+                            <span class="field-hint"
+                                  id="message-count">
+
+                                0 / 3000 characters
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- HONEYPOT -->
+
+                    <div class="honeypot" aria-hidden="true">
+
+                        <label for="website">
+                            Leave this field empty
+                        </label>
+
+                        <input type="text"
+                               name="website"
+                               id="website"
+                               tabindex="-1"
+                               autocomplete="off">
+
+                    </div>
+
+                    <!-- PRIVACY CONSENT -->
+
+                    <div class="consent-row">
+
+                        <input
+                            type="checkbox"
+                            name="consent"
+                            id="consent"
+                            value="yes"
+                            required>
+
+                        <label for="consent">
+
+                            I have read the
+
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>
+
+                            and agree that Parusavedhi may
+                            use the information provided to
+                            respond to my enquiry.
+
+                        </label>
+
+                    </div>
+
+                    <!-- TURNSTILE -->
+
+                    <div class="turnstile-wrapper">
+
+                        <div
+                            class="cf-turnstile"
+                            data-sitekey="1x00000000000000000000AA"
+                            data-action="enquiry"
+                            data-theme="light">
+
+                        </div>
+
+                    </div>
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        id="submit-button"
+                        class="btn btn-primary form-submit"
+                        disabled>
+
+                        Submit Enquiry →
+
+                    </button>
+
+                    <!-- STATUS MESSAGE -->
+
+                    <div
+                        id="form-status"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite"
+                        hidden>
+
+                    </div>
+
+                    <noscript>
+
+                        <p class="form-status info">
+
+                            JavaScript is required to use this
+                            enquiry form. Please contact us at
+                            info@parusavedhi.com.
+
+                        </p>
+
+                    </noscript>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CORPORATE INFORMATION -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Our Corporate Identity
+                </span>
+
+                <h2>Parusavedhi Food Industries</h2>
+
+                <div class="gold-line"></div>
+
+            </div>
+
+            <div class="corporate-table-wrapper">
+
+                <table class="corporate-table">
+
+                    <tbody>
+
+                        <tr>
+
+                            <th scope="row">
+                                Registered Company Name
+                            </th>
+
+                            <td>
+                                Parusavedhi Food Industries
+                                Private Limited
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">CIN</th>
+
+                            <td>
+                                U15132TG2021PTC155036
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">GSTIN</th>
+
+                            <td>
+                                36AAMCP3020C1ZU
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Established
+                            </th>
+
+                            <td>2021</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Corporate Location
+                            </th>
+
+                            <td>
+                                Hyderabad, Telangana, India
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th scope="row">
+                                Official Website
+                            </th>
+
+                            <td>
+                                www.parusavedhi.com
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BRAND PROMISE -->
+
+    <section class="philosophy-banner">
+
+        <div class="container">
+
+            <h2>Nothing But Our Best.</h2>
+
+            <p>
+                Every conversation is an opportunity
+                to build trust, understand needs and
+                create meaningful value.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+</body>
+
+</html>
