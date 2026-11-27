@@ -381,17 +381,49 @@ function initializeDropdowns() {
 
 /* ---------- Active Page Highlight ---------- */
 
-function highlightActivePage() {
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
+/* ---------- Active Page Highlight ---------- */
+
+function highlightActivePage() {
+
+    const currentPage = (
+        window.location.pathname.split("/").pop()
+        || "index.html"
+    ).replace(/\.html$/, "");
+
+    document.querySelectorAll(".nav-menu a")
+        .forEach(link => {
+
+            const linkPage = (
+                link.getAttribute("href") || ""
+            ).replace(/\.html$/, "");
+
+            if (linkPage !== currentPage) return;
+
             link.classList.add("active");
+
             link.setAttribute("aria-current", "page");
-        }
-    });
+
+            // Highlight the parent dropdown button.
+
+            const dropdown = link.closest(".dropdown-menu");
+
+            if (dropdown) {
+
+                const parentToggle =
+                    dropdown.parentElement.querySelector(
+                        ".dropdown-toggle"
+                    );
+
+                if (parentToggle) {
+
+                    parentToggle.classList.add("active");
+
+                }
+            }
+        });
 }
+
 
 /* ---------- Scroll Effects ---------- */
 
@@ -434,9 +466,118 @@ function initializeScrollEffects() {
     updateScrollState();
 }
 
+
+
+
+
+/* ---------- Product Image Fallback ---------- */
+
+function initializeProductImages() {
+
+    document.querySelectorAll("[data-product-image]")
+        .forEach(img => {
+
+            function showFallback() {
+
+                const wrapper = img.closest(
+                    "[data-image-wrapper]"
+                );
+
+                if (!wrapper) return;
+
+                const fallback = wrapper.querySelector(
+                    ".product-placeholder"
+                );
+
+                img.hidden = true;
+
+                if (fallback) {
+                    fallback.hidden = false;
+                }
+            }
+
+            img.addEventListener("error", showFallback);
+
+            img.addEventListener("load", () => {
+
+                const wrapper = img.closest(
+                    "[data-image-wrapper]"
+                );
+
+                const fallback = wrapper?.querySelector(
+                    ".product-placeholder"
+                );
+
+                img.hidden = false;
+
+                if (fallback) {
+                    fallback.hidden = true;
+                }
+            });
+
+            // Handle images that failed before initialization.
+
+            if (img.complete && img.naturalWidth === 0) {
+                showFallback();
+            }
+        });
+}
+
+/* ---------- Product Image Gallery ---------- */
+
+function initializeProductGallery() {
+
+    document.querySelectorAll(".product-gallery")
+        .forEach(gallery => {
+
+            const mainImage = gallery.querySelector(
+                ".gallery-main [data-product-image]"
+            );
+
+            const thumbnails = gallery.querySelectorAll(
+                ".gallery-thumbnail"
+            );
+
+            if (!mainImage || !thumbnails.length) return;
+
+            thumbnails.forEach(thumbnail => {
+
+                thumbnail.addEventListener("click", () => {
+
+                    const imageSource =
+                        thumbnail.dataset.image;
+
+                    if (!imageSource) return;
+
+                    mainImage.src = imageSource;
+
+                    mainImage.alt =
+                        thumbnail.dataset.alt ||
+                        "Parusavedhi product photograph";
+
+                    thumbnails.forEach(item => {
+                        item.classList.remove("is-active");
+                        item.setAttribute(
+                            "aria-pressed", "false"
+                        );
+                    });
+
+                    thumbnail.classList.add("is-active");
+
+                    thumbnail.setAttribute(
+                        "aria-pressed", "true"
+                    );
+                });
+            });
+        });
+}
+
 /* ---------- Application Initialization ---------- */
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
     renderHeader();
     renderFooter();
 
@@ -444,4 +585,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeDropdowns();
     highlightActivePage();
     initializeScrollEffects();
+
+    // Product catalogue and gallery
+
+    initializeProductImages();
+    initializeProductGallery();
 });
